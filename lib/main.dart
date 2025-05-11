@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/bmi_wizard.dart';
+import 'screens/splash_screen.dart';  // Import the splash screen
 
 void main() {
   runApp(const BMICalculatorApp());
@@ -26,7 +27,10 @@ class BMICalculatorApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const BMIWizard(),
+      home: const SplashScreen(),  // Set SplashScreen as the initial screen
+      routes: {
+        '/home': (context) => const BMIWizard(),
+      },
     );
   }
 }
